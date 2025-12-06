@@ -11,8 +11,8 @@ class Solution:
             linked_vals.append(current.val)
             current = current.next
         result = linked_vals[0] + linked_vals[-1]
-        l: int = len(linked_vals) // 2
-        for i in range(1, l):
+        half_length: int = len(linked_vals) // 2
+        for i in range(1, half_length):
             twin_index = len(linked_vals) - 1 - i
             twin_sum = linked_vals[i] + linked_vals[twin_index]
             result = max(result, twin_sum)
